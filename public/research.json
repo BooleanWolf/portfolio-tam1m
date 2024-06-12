@@ -23,14 +23,14 @@
   {
     "id": 4,
     "name": "Diana",
-    "image": "https://t3.ftcdn.net/jpg/01/79/64/42/360_F_179644213_rZr9fFOuyUcIIubYCKxKG1O17gSrGg2x.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdrbvco_EwP93QNatSd5WSjT8bYMInn4MCFA&s",
     "description": "Diana is a UI/UX designer with a keen eye for detail and user experience.",
     "value": "UI/UX Designer"
   },
   {
     "id": 5,
     "name": "Eve",
-    "image": "https://t3.ftcdn.net/jpg/01/79/64/42/360_F_179644213_rZr9fFOuyUcIIubYCKxKG1O17gSrGg2x.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdrbvco_EwP93QNatSd5WSjT8bYMInn4MCFA&s",
     "description": "Eve is a cybersecurity expert specializing in network security and encryption.",
     "value": "Cybersecurity Expert"
   }

@@ -7,7 +7,7 @@ const Research = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("../../../../public/research.json");
+        const response = await fetch("/research.json");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -29,16 +29,27 @@ const Research = () => {
   return (
     <div>
       <h1 className="text-3xl font-semibold">This is the research page</h1>
-      <ul>
+      <div>
         {data.map((item) => (
-          <li key={item.id}>
-            <h2>{item.name}</h2>
-            <img src={item.image} alt={item.name} />
-            <p>{item.description}</p>
-            <p>Role: {item.value}</p>
-          </li>
+          <div key={item.id} className="flex gap-4  my-4 p-3 border  shadow-sm">
+            <div>
+              <img
+                className="w-[200px] h-[150px]"
+                src={item.image}
+                alt={item.name}
+              />
+            </div>
+            <div>
+              <h2 className="text-xl font-semibold"> {item.name}</h2>
+
+              <p>{item.description}</p>
+              <p>
+                <span className="font-semibold">Role:</span> {item.value}
+              </p>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
