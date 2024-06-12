@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Alice",
+    "image": "https://t3.ftcdn.net/jpg/01/79/64/42/360_F_179644213_rZr9fFOuyUcIIubYCKxKG1O17gSrGg2x.jpg",
+    "description": "Alice is a software developer with a passion for front-end technologies.",
+    "value": "Front-End Developer"
+  },
+  {
+    "id": 2,
+    "name": "Bob",
+    "image": "https://t3.ftcdn.net/jpg/01/79/64/42/360_F_179644213_rZr9fFOuyUcIIubYCKxKG1O17gSrGg2x.jpg",
+    "description": "Bob is a data scientist who loves working with big data and machine learning.",
+    "value": "Data Scientist"
+  },
+  {
+    "id": 3,
+    "name": "Charlie",
+    "image": "https://t3.ftcdn.net/jpg/01/79/64/42/360_F_179644213_rZr9fFOuyUcIIubYCKxKG1O17gSrGg2x.jpg",
+    "description": "Charlie is a project manager with extensive experience in agile methodologies.",
+    "value": "Project Manager"
+  },
+  {
+    "id": 4,
+    "name": "Diana",
+    "image": "https://t3.ftcdn.net/jpg/01/79/64/42/360_F_179644213_rZr9fFOuyUcIIubYCKxKG1O17gSrGg2x.jpg",
+    "description": "Diana is a UI/UX designer with a keen eye for detail and user experience.",
+    "value": "UI/UX Designer"
+  },
+  {
+    "id": 5,
+    "name": "Eve",
+    "image": "https://t3.ftcdn.net/jpg/01/79/64/42/360_F_179644213_rZr9fFOuyUcIIubYCKxKG1O17gSrGg2x.jpg",
+    "description": "Eve is a cybersecurity expert specializing in network security and encryption.",
+    "value": "Cybersecurity Expert"
+  }
+]
