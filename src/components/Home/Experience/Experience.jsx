@@ -1,50 +1,43 @@
-import { useEffect, useState } from "react";
+import React from "react";
 
 const Experience = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/research.json");
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const result = await response.json();
-        setData(result);
-        setLoading(false);
-      } catch (error) {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // Sample experience data
+  const experiences = [
+    {
+      id: 1,
+      jobTitle: "Member, Software Sub-Team",
+      company: "Team Interplanetar, BUET",
+      from: "2023",
+      to: "",
+      role: "General Member",
+      responsibility: "Developing autonomous system for the rover and also tuning the navigation system.",
+      logo: "https://buetinterplanetar.com/wp-content/uploads/2021/11/logo.png", // Sample logo URL
+    },
+    // Add more experience records as needed
+  ];
 
   return (
     <div>
-      <h1 className="text-3xl font-semibold">This is the Experience page</h1>
+        
       <div>
-        {data.map((item) => (
-          <div key={item.id} className="flex gap-4  my-4 p-3 border  shadow-sm">
+        {experiences.map((experience) => (
+          <div key={experience.id} className="flex gap-4 my-4 p-3 border shadow-sm">
             <div>
-              <img
-                className="w-[200px] h-[150px]"
-                src={item.image}
-                alt={item.name}
-              />
+              <img className="w-[50px] h-[50px]" src={experience.logo} alt={experience.company} />
             </div>
             <div>
-              <h2 className="text-xl font-semibold"> {item.name}</h2>
-
-              <p>{item.description}</p>
+              <h2 className="text-xl font-semibold">{experience.jobTitle}</h2>
               <p>
-                <span className="font-semibold">Role:</span> {item.value}
+                {experience.from} - {experience.to}
+              </p>
+              <p>
+                <span className="font-semibold">Company:</span> {experience.company}
+              </p>
+              <p>
+                <span className="font-semibold">Role:</span> {experience.role}
+              </p>
+              <p>
+                <span className="font-semibold">Responsibility:</span> {experience.responsibility}
               </p>
             </div>
           </div>

@@ -1,25 +1,23 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Educations = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/research.json");
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const result = await response.json();
-        setData(result);
-        setLoading(false);
-      } catch (error) {
-        setLoading(false);
-      }
-    };
+  // Sample education data
+  const educations = [
+    { id: 1, degree: "SSC", institution: "Agrani School and College", year: "2018", result: "GPA 5.00 (1225/1300)" },
+    { id: 2, degree: "HSC", institution: "Rajshahi College", year: "2020", result: "GPA 5.00" },
+    { id: 3, degree: "B.Sc", institution: "Mechanical Engineering, BUET", year: "Ongoing", result: "" },
+    // Add more education records as needed
+  ];
 
-    fetchData();
+  useEffect(() => {
+    // Mock API call
+    setTimeout(() => {
+      setData(educations);
+      setLoading(false);
+    }, 1000);
   }, []);
 
   if (loading) {
@@ -27,28 +25,31 @@ const Educations = () => {
   }
 
   return (
-    <div>
-      <h1 className="text-3xl font-semibold">This is the Educations page</h1>
+    <div className="flex justify-center">
       <div>
-        {data.map((item) => (
-          <div key={item.id} className="flex gap-4  my-4 p-3 border  shadow-sm">
-            <div>
-              <img
-                className="w-[200px] h-[150px]"
-                src={item.image}
-                alt={item.name}
-              />
-            </div>
-            <div>
-              <h2 className="text-xl font-semibold"> {item.name}</h2>
-
-              <p>{item.description}</p>
-              <p>
-                <span className="font-semibold">Role:</span> {item.value}
-              </p>
-            </div>
-          </div>
-        ))}
+       
+        <div>
+          <table className="table-auto">
+            <thead>
+              <tr>
+                <th className="px-4 py-2">Degree</th>
+                <th className="px-4 py-2">Institution</th>
+                <th className="px-4 py-2">Year</th>
+                <th className="px-4 py-2">Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((education) => (
+                <tr key={education.id}>
+                  <td className="border px-4 py-2">{education.degree}</td>
+                  <td className="border px-4 py-2">{education.institution}</td>
+                  <td className="border px-4 py-2">{education.year}</td>
+                  <td className="border px-4 py-2">{education.result}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

@@ -1,55 +1,41 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import SectionHeader from "./SectionHeader";
+import ResearchCard from "./ResearchCard";
 
 const Research = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const researchList = [
+    {
+      id: 1,
+      title: "The Impact of AI on Healthcare",
+      author: "John Doe",
+      tags: ["AI", "Healthcare", "Research"],
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      publication: "Journal of Healthcare Technology",
+    },
+    // Add more research items as needed
+  ];
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/research.json");
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const result = await response.json();
-        setData(result);
-        setLoading(false);
-      } catch (error) {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  const researchInterests = [
+    "Deep Learning",
+    "Computer Vision",
+    "Robotics",
+    "Intelligent Systems",
+    "Reinforcement Learning",
+  ];
 
   return (
     <div>
-      <h1 className="text-3xl font-semibold">This is the research page</h1>
+      <SectionHeader
+        title="My Research Interests:"
+        items={researchInterests.map((interest, index) => `${index + 1}. ${interest}`)}
+      />
+      <h2 className="text-2xl font-semibold mb-2">Publications: </h2>
+{/* 
       <div>
-        {data.map((item) => (
-          <div key={item.id} className="flex gap-4  my-4 p-3 border  shadow-sm">
-            <div>
-              <img
-                className="w-[200px] h-[150px]"
-                src={item.image}
-                alt={item.name}
-              />
-            </div>
-            <div>
-              <h2 className="text-xl font-semibold"> {item.name}</h2>
-
-              <p>{item.description}</p>
-              <p>
-                <span className="font-semibold">Role:</span> {item.value}
-              </p>
-            </div>
-          </div>
+        {researchList.map((research) => (
+          <ResearchCard key={research.id} research={research} />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

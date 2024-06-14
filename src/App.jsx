@@ -6,8 +6,9 @@ import RouteItem from "./components/Home/Shared/RouteItem";
 function App() {
   return (
     <div>
-      <About />
       <RouteItem />
+      <About />
+      
       <Outlet />
     </div>
   );

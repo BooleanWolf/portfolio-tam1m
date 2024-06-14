@@ -6,6 +6,7 @@ import Award from "../components/Home/Award/Award";
 import Blogs from "../components/Home/Blogs/Blogs";
 import Educations from "../components/Home/Educations/Educations";
 import Experience from "../components/Home/Experience/Experience";
+import Update from "../components/Home/Update/Update";
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
       {
         path: "/experience",
         element: <Experience />,
+      },
+      {
+        path: "/",
+        element: <Update/>,
       },
     ],
   },

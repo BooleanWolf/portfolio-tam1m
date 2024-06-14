@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 const RouteItem = () => {
   return (
     <>
-      <div className="my-8">
+      <div className="mb-2">
         <div className="">
-          <ul className="flex gap-4 font-semibold p-3 bg-black text-white  ">
+          <ul className="flex gap-8 font-semibold p-3 bg-black text-white  ">
+          <li>
+              <Link to="/">Update</Link>
+            </li>
             <li>
               <Link to="/research">Research</Link>
             </li>
@@ -15,9 +18,9 @@ const RouteItem = () => {
             <li>
               <Link to="/award">Award</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/blogs">Blogs</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/educations">Educations</Link>
             </li>
