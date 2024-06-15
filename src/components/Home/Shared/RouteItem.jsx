@@ -7,7 +7,7 @@ const RouteItem = () => {
         <div className="">
           <ul className="flex gap-8 font-semibold p-3 bg-black text-white  ">
           <li>
-              <Link to="/">Update</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/research">Research</Link>

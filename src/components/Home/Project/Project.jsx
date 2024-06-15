@@ -13,6 +13,57 @@ const Project = () => {
       githubLink: "https://github.com/",
       youtubeLink: "https://www.youtube.com/",
     },
+    {
+      id: 1,
+      title: "TARUC-NNAV: A Navigation system based on Aruco tag traversal using only Camera feed",
+      tags: ["ROS", "Robotics", "Computer Vision", "Rover", "Intelligent System"], 
+      category: "Intermediate",
+      description: "A Navigation package for ROS based rover to traverse aruco tags based on priority.",
+      image: "https://b2633864.smushcdn.com/2633864/wp-content/uploads/2020/12/aruco_generate_tags_sample_tags.png?lossy=2&strip=1&webp=1",
+      githubLink: "https://github.com/BooleanWolf/TARUCO_Nav",
+      youtubeLink: "https://www.facebook.com/mdtamim.sarkar.58/videos/2462273223981171",
+    },
+    {
+      id: 1,
+      title: "Glitch - A Game based on the theme \" It's not supposed to do that \" ",
+      tags: [ "Game Development", "Pygame", "Algorithm"], 
+      category: "Inetermediate",
+      description: "It was developed for participation in Gamejam 2023 organized by IEEE CS BUET",
+      image:"public/gamejam.png",
+      githubLink: "https://github.com/BooleanWolf/Gamejam_2023_Team_Jackpot",
+      youtubeLink: "https://www.facebook.com/mdtamim.sarkar.58/videos/1281225272431239",
+    },
+    {
+      id: 1,
+      title: "Falcon Two Wheeler Bot - A ROS Beginner Project",
+      tags: [ "ROS", "Python", "URDF", "Robot Modelling"], 
+      category: "Beginner",
+      description: "Developed bot from scratch using URDF. This is my first ROS project. After learning URDF and the basic of ROS, I created this.",
+      image: "https://automaticaddison.com/wp-content/uploads/2020/10/cover-gazebo-mobile-robot.jpg",
+      githubLink: "https://github.com/BooleanWolf/Falcon-Two-Wheeler-Robot",
+      youtubeLink: "",
+    },
+    {
+      id: 1,
+      title: "Forward Kinematics of 2D Arm using MATLAB",
+      tags: [ "Robotics", "Imverse Kinematics", "Arm"], 
+      category: "Beginner",
+      description: "A graphical user interface to determing the end effector coordinator of arm using forward kinematics implemented by Matlab.",
+      image: "public/matlabarm.png",
+      githubLink: "https://github.com/BooleanWolf/Forward-Kinematics-of-2D-Arm---MATLAB",
+      youtubeLink: "https://www.linkedin.com/posts/md-tamim-sarkar-7193521aa_matlab-simulink-beginner-activity-7072919122354835456-2bE-?utm_source=share&utm_medium=member_desktop",
+    },
+    {
+      id: 1,
+      title: "Discord Bot for Task Management",
+      tags: [ "Discord.py", "Python", "SQL"], 
+      category: "Beginner",
+      description: "Developed a discord bot for my server for bot management",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1nc7pYOXIAv734NDZcQswMbnanR7b3o-yCQ&s",
+      githubLink: "https://github.com/BooleanWolf/Discord-Bot---Task-Management",
+      youtubeLink: "",
+    },
+   
    
     // Add more projects as needed
   ];
@@ -78,10 +129,10 @@ const Project = () => {
                 <p className="text-gray-600">{project.description}</p>
                 <div className="flex mt-2">
                   <button className="bg-black text-white py-1 px-2 rounded-md focus:outline-none focus:ring-2 focus:ring-black mr-2">
-                    GitHub
+                   <a href={project.githubLink}> GitHub</a>
                   </button>
                   <button className="bg-black text-white py-1 px-2 rounded-md focus:outline-none focus:ring-2 focus:ring-black">
-                    YouTube
+                    <a href={project.youtubeLink}>YouTube</a>
                   </button>
                 </div>
               </div>
